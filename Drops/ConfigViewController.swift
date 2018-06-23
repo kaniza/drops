@@ -15,14 +15,15 @@ class ConfigViewController: UIViewController {
     @IBOutlet var gravitySlider:UISlider!
     @IBOutlet var deviceGravitySlider:UISlider!
     @IBOutlet var ballRadiusSlider:UISlider!
+    @IBOutlet var showBallRaiusSwitch:UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.gravitySlider.maximumValue = 9.8
         self.gravitySlider.minimumValue = 1.0
-        self.deviceGravitySlider.maximumValue = 4.0
+        self.deviceGravitySlider.maximumValue = 8.0
         self.deviceGravitySlider.minimumValue = 0.5
-        self.ballRadiusSlider.maximumValue = 10.0
+        self.ballRadiusSlider.maximumValue = DropScene.maxBallSize
         self.ballRadiusSlider.minimumValue = 3
     }
 
@@ -33,6 +34,7 @@ class ConfigViewController: UIViewController {
         self.gravitySlider.value = UserDefaults.standard.float(forKey: DropScene.gravityValueKey)
         self.deviceGravitySlider.value = UserDefaults.standard.float(forKey: DropScene.deviceGravityValueKey)
         self.ballRadiusSlider.value = UserDefaults.standard.float(forKey: DropScene.ballRadiusKey)
+        self.showBallRaiusSwitch.isOn = UserDefaults.standard.bool(forKey: DropScene.showBallRadiusBarKey)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,6 +62,12 @@ class ConfigViewController: UIViewController {
     @IBAction func adjustBallRadiusSetting(sender: UISlider) {
         UserDefaults.standard.set(sender.value, forKey:DropScene.ballRadiusKey)
     }
+    
+    @IBAction func toggleShowBallRadiusBar(sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey:DropScene.showBallRadiusBarKey)
+    }
+    
+//    static let showBallRadiusBarKey = "showBallRadiusBar"
     /*
     // MARK: - Navigation
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F74E8D8220DE2C3600DD5F80 /* dropsicon.png in Resources */ = {isa = PBXBuildFile; fileRef = F74E8D8120DE2C3600DD5F80 /* dropsicon.png */; };
 		F8B757C01FD553CE00CA7CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B757BF1FD553CE00CA7CC7 /* AppDelegate.swift */; };
 		F8B757C21FD553CE00CA7CC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B757C11FD553CE00CA7CC7 /* ViewController.swift */; };
 		F8B757C51FD553CE00CA7CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B757C31FD553CE00CA7CC7 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F74E8D8120DE2C3600DD5F80 /* dropsicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropsicon.png; sourceTree = "<group>"; };
 		F8B757BC1FD553CE00CA7CC7 /* Drops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B757BF1FD553CE00CA7CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B757C11FD553CE00CA7CC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		F8B757BE1FD553CE00CA7CC7 /* Drops */ = {
 			isa = PBXGroup;
 			children = (
+				F74E8D8120DE2C3600DD5F80 /* dropsicon.png */,
 				F8B757BF1FD553CE00CA7CC7 /* AppDelegate.swift */,
 				F8B757D11FD55ED600CA7CC7 /* DropScene.swift */,
 				F8B757C11FD553CE00CA7CC7 /* ViewController.swift */,
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B757CA1FD553CE00CA7CC7 /* LaunchScreen.storyboard in Resources */,
+				F74E8D8220DE2C3600DD5F80 /* dropsicon.png in Resources */,
 				F8B757C71FD553CE00CA7CC7 /* Assets.xcassets in Resources */,
 				F8B757C51FD553CE00CA7CC7 /* Main.storyboard in Resources */,
 			);

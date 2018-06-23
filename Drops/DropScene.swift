@@ -18,6 +18,9 @@ class DropScene: SKScene {
     static let deviceGravityValueKey = "deviceGravityValue"
     static let useRandomColorKey = "useRandomColor"
     static let ballRadiusKey = "ballRadius"
+    static let showBallRadiusBarKey = "showBallRadiusBar"
+    
+    static let maxBallSize = 40.0 as Float
 
     override init(size: CGSize) {
         self.initialTouchPoint = CGPoint.zero
@@ -81,7 +84,7 @@ class DropScene: SKScene {
         dropNode.physicsBody = SKPhysicsBody(circleOfRadius: radius)
         dropNode.physicsBody?.affectedByGravity = true
         dropNode.physicsBody?.velocity = CGVector(dx: velocityX, dy: velocityY)
-        //dropNode.physicsBody?.restitution = 0.9
+        dropNode.physicsBody?.restitution = 0.9
         dropNode.physicsBody?.restitution = 0.8
         dropNode.physicsBody?.linearDamping = 0
         dropNode.physicsBody?.friction = 0
@@ -92,11 +95,22 @@ class DropScene: SKScene {
     override func sceneDidLoad() {
         UserDefaults.standard.register(defaults:[DropScene.useDeviceTiltForGravityKey : false])
         UserDefaults.standard.register(defaults:[DropScene.gravityValueKey : 4.9])
-        UserDefaults.standard.register(defaults:[DropScene.deviceGravityValueKey : 2.0])
+        UserDefaults.standard.register(defaults:[DropScene.deviceGravityValueKey : 4.0])
         UserDefaults.standard.register(defaults:[DropScene.useRandomColorKey : true])
         UserDefaults.standard.register(defaults:[DropScene.ballRadiusKey : 5.0])
+        UserDefaults.standard.register(defaults:[DropScene.showBallRadiusBarKey: false])
         self.configChanged()
         self.ballDropper = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.addNewDrop),userInfo: nil, repeats: true)
+        
+        
+        let dropperNode = SKShapeNode()
+        dropperNode.position = CGPoint(x:100, y:600)
+        let path = CGMutablePath()
+        path.addArc(center: CGPoint.zero, radius: 5, startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        dropperNode.path = path
+        dropperNode.strokeColor = UIColor.white
+        dropperNode.physicsBody?.affectedByGravity = true
+        self.addChild(dropperNode)
     }
 
     private func applyBarNodeShapeLine(_ p0: CGPoint, _  p1: CGPoint, _ barNode: SKShapeNode) {
