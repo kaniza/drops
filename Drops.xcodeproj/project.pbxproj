@@ -13,6 +13,7 @@
 		F8B757C71FD553CE00CA7CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B757C61FD553CE00CA7CC7 /* Assets.xcassets */; };
 		F8B757CA1FD553CE00CA7CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B757C81FD553CE00CA7CC7 /* LaunchScreen.storyboard */; };
 		F8B757D21FD55ED600CA7CC7 /* DropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B757D11FD55ED600CA7CC7 /* DropScene.swift */; };
+		F8B96FAB20DDA22600EB942B /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B96FAA20DDA22600EB942B /* ConfigViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F8B757C91FD553CE00CA7CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8B757CB1FD553CE00CA7CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8B757D11FD55ED600CA7CC7 /* DropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropScene.swift; sourceTree = "<group>"; };
+		F8B96FAA20DDA22600EB942B /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F8B757D11FD55ED600CA7CC7 /* DropScene.swift */,
 				F8B757C11FD553CE00CA7CC7 /* ViewController.swift */,
 				F8B757C31FD553CE00CA7CC7 /* Main.storyboard */,
+				F8B96FAA20DDA22600EB942B /* ConfigViewController.swift */,
 				F8B757C61FD553CE00CA7CC7 /* Assets.xcassets */,
 				F8B757C81FD553CE00CA7CC7 /* LaunchScreen.storyboard */,
 				F8B757CB1FD553CE00CA7CC7 /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				F8B757D21FD55ED600CA7CC7 /* DropScene.swift in Sources */,
 				F8B757C21FD553CE00CA7CC7 /* ViewController.swift in Sources */,
+				F8B96FAB20DDA22600EB942B /* ConfigViewController.swift in Sources */,
 				F8B757C01FD553CE00CA7CC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
