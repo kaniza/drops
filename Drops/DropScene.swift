@@ -11,7 +11,7 @@ class DropScene: SKScene {
     var deviceGravityValue:Double = 0
     var ballRadius:Double = 5.0
     var useDeviceTiltForGravity:Bool = true
-    var useRandomColor:Bool = true 
+    var useRandomColor:Bool = true
 
     static let useDeviceTiltForGravityKey = "useDeviceTiltForGravity"
     static let gravityValueKey = "gravityValue"
@@ -19,7 +19,7 @@ class DropScene: SKScene {
     static let useRandomColorKey = "useRandomColor"
     static let ballRadiusKey = "ballRadius"
     static let showBallRadiusBarKey = "showBallRadiusBar"
-    
+
     static let maxBallSize = 40.0 as Float
 
     override init(size: CGSize) {
@@ -101,8 +101,8 @@ class DropScene: SKScene {
         UserDefaults.standard.register(defaults:[DropScene.showBallRadiusBarKey: false])
         self.configChanged()
         self.ballDropper = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.addNewDrop),userInfo: nil, repeats: true)
-        
-        
+
+
         let dropperNode = SKShapeNode()
         dropperNode.position = CGPoint(x:100, y:600)
         let path = CGMutablePath()

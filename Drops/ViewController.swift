@@ -5,7 +5,7 @@ class ViewController: UIViewController {
     @IBOutlet var ballRadiusSlider:UISlider!
     @IBOutlet var skView:SKView!
     var scene:DropScene!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scene = DropScene.init(size: self.view.bounds.size)
@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         self.ballRadiusSlider.maximumValue = DropScene.maxBallSize
         self.ballRadiusSlider.minimumValue = 3
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.ballRadiusSlider.isHidden = !UserDefaults.standard.bool(forKey: DropScene.showBallRadiusBarKey)
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         self.scene.configChanged()
         self.ballRadiusSlider.isHidden = !UserDefaults.standard.bool(forKey: DropScene.showBallRadiusBarKey)
     }
-    
+
     @IBAction func adjustBallRadiusSetting(sender: UISlider) {
         UserDefaults.standard.set(sender.value, forKey:DropScene.ballRadiusKey)
         self.scene.configChanged()

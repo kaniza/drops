@@ -62,20 +62,8 @@ class ConfigViewController: UIViewController {
     @IBAction func adjustBallRadiusSetting(sender: UISlider) {
         UserDefaults.standard.set(sender.value, forKey:DropScene.ballRadiusKey)
     }
-    
+
     @IBAction func toggleShowBallRadiusBar(sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey:DropScene.showBallRadiusBarKey)
     }
-    
-//    static let showBallRadiusBarKey = "showBallRadiusBar"
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
