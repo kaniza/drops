@@ -149,7 +149,7 @@ class DropScene: SKScene {
     }
 
     @objc public func doubleTapped(_ sender:UIGestureRecognizer) {
-        if (sender.state == UIGestureRecognizerState.ended) {
+        if (sender.state == UIGestureRecognizer.State.ended) {
             var touchLocation = sender.location(in: self.view)
             touchLocation = self.convertPoint(fromView: touchLocation)
             let node = self.atPoint(touchLocation)
